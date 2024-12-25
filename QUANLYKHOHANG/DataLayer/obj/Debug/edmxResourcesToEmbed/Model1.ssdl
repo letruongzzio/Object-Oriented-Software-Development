@@ -78,8 +78,9 @@
     <Property Name="DVT" Type="nvarchar" MaxLength="50" />
     <Property Name="DONGIA" Type="float" />
     <Property Name="MANCC" Type="int" />
-    <Property Name="XUATXU" Type="int" />
+    <Property Name="MAXX" Type="int" />
     <Property Name="IDNHOM" Type="int" />
+    <Property Name="MOTA" Type="nvarchar" MaxLength="500" />
     <Property Name="CREATE_DATE" Type="datetime" />
     <Property Name="CREATE_BY" Type="int" />
     <Property Name="DISABLED" Type="bit" />

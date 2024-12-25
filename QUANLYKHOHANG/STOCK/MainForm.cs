@@ -125,6 +125,12 @@ namespace STOCK
                         frm.ShowDialog();
                         break;
                     }
+                case "HANGHOA":
+                    {
+                        frmHangHoa frm = new frmHangHoa();
+                        frm.ShowDialog();
+                        break;
+                    }
                     // case "TANG":
                     // {
                     //     frmTang frm = new frmTang();

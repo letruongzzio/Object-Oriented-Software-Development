@@ -21,6 +21,11 @@ namespace BusinessLayer
             return db.tb_NHACUNGCAP.FirstOrDefault(x => x.MANCC == mancc);
         }
 
+        public List<tb_NHACUNGCAP> getList()
+        {
+            return db.tb_NHACUNGCAP.Where(x => x.DISABLED == false).ToList();
+        }
+
         public List<tb_NHACUNGCAP> getAll()
         {
             return db.tb_NHACUNGCAP.ToList();

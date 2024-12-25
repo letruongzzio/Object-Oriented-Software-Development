@@ -83,8 +83,9 @@
           <Property Name="DVT" Type="nvarchar" MaxLength="50" />
           <Property Name="DONGIA" Type="float" />
           <Property Name="MANCC" Type="int" />
-          <Property Name="XUATXU" Type="int" />
+          <Property Name="MAXX" Type="int" />
           <Property Name="IDNHOM" Type="int" />
+          <Property Name="MOTA" Type="nvarchar" MaxLength="500" />
           <Property Name="CREATE_DATE" Type="datetime" />
           <Property Name="CREATE_BY" Type="int" />
           <Property Name="DISABLED" Type="bit" />
@@ -279,22 +280,6 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TEN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="tb_HANGHOA">
-          <Key>
-            <PropertyRef Name="BARCODE" />
-          </Key>
-          <Property Name="BARCODE" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TENHH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TENTAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DVT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DONGIA" Type="Double" />
-          <Property Name="MANCC" Type="Int32" />
-          <Property Name="XUATXU" Type="Int32" />
-          <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
-          <Property Name="CREATE_BY" Type="Int32" />
-          <Property Name="DISABLED" Type="Boolean" />
-          <Property Name="IDNHOM" Type="Int32" />
-        </EntityType>
         <EntityType Name="tb_SYS_FUNC">
           <Key>
             <PropertyRef Name="FUNC_CODE" />
@@ -390,7 +375,6 @@
           <EntitySet Name="tb_CHUNGTU_CT" EntityType="Self.tb_CHUNGTU_CT" />
           <EntitySet Name="tb_DONVI" EntityType="Self.tb_DONVI" />
           <EntitySet Name="tb_DVT" EntityType="Self.tb_DVT" />
-          <EntitySet Name="tb_HANGHOA" EntityType="Self.tb_HANGHOA" />
           <EntitySet Name="tb_SYS_FUNC" EntityType="Self.tb_SYS_FUNC" />
           <EntitySet Name="tb_SYS_GROUP" EntityType="Self.tb_SYS_GROUP" />
           <EntitySet Name="tb_SYS_REPORT" EntityType="Self.tb_SYS_REPORT" />
@@ -402,6 +386,7 @@
           <EntitySet Name="tb_CONGTY" EntityType="KHOHANG.tb_CONGTY" />
           <EntitySet Name="tb_NHACUNGCAP" EntityType="KHOHANG.tb_NHACUNGCAP" />
           <EntitySet Name="tb_NHOMHH" EntityType="KHOHANG.tb_NHOMHH" />
+          <EntitySet Name="tb_HANGHOA" EntityType="KHOHANG.tb_HANGHOA" />
         </EntityContainer>
         <EntityType Name="tb_CONGTY">
           <Key>
@@ -436,6 +421,23 @@
           <Property Name="TENNHOM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="DISABLED" Type="Boolean" />
           <Property Name="GHICHU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tb_HANGHOA">
+          <Key>
+            <PropertyRef Name="BARCODE" />
+          </Key>
+          <Property Name="BARCODE" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="TENHH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TENTAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DVT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DONGIA" Type="Double" />
+          <Property Name="MANCC" Type="Int32" />
+          <Property Name="MAXX" Type="Int32" />
+          <Property Name="IDNHOM" Type="Int32" />
+          <Property Name="MOTA" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATE_BY" Type="Int32" />
+          <Property Name="DISABLED" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -500,23 +502,6 @@
               <MappingFragment StoreEntitySet="tb_DVT">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TEN" ColumnName="TEN" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tb_HANGHOA">
-            <EntityTypeMapping TypeName="KHOHANG.tb_HANGHOA">
-              <MappingFragment StoreEntitySet="tb_HANGHOA">
-                <ScalarProperty Name="IDNHOM" ColumnName="IDNHOM" />
-                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
-                <ScalarProperty Name="TENHH" ColumnName="TENHH" />
-                <ScalarProperty Name="TENTAT" ColumnName="TENTAT" />
-                <ScalarProperty Name="DVT" ColumnName="DVT" />
-                <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
-                <ScalarProperty Name="MANCC" ColumnName="MANCC" />
-                <ScalarProperty Name="XUATXU" ColumnName="XUATXU" />
-                <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
-                <ScalarProperty Name="CREATE_BY" ColumnName="CREATE_BY" />
-                <ScalarProperty Name="DISABLED" ColumnName="DISABLED" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -652,6 +637,24 @@
                 <ScalarProperty Name="DISABLED" ColumnName="DISABLED" />
                 <ScalarProperty Name="TENNHOM" ColumnName="TENNHOM" />
                 <ScalarProperty Name="IDNHOM" ColumnName="IDNHOM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_HANGHOA">
+            <EntityTypeMapping TypeName="KHOHANG.tb_HANGHOA">
+              <MappingFragment StoreEntitySet="tb_HANGHOA">
+                <ScalarProperty Name="DISABLED" ColumnName="DISABLED" />
+                <ScalarProperty Name="CREATE_BY" ColumnName="CREATE_BY" />
+                <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="IDNHOM" ColumnName="IDNHOM" />
+                <ScalarProperty Name="MAXX" ColumnName="MAXX" />
+                <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+                <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+                <ScalarProperty Name="DVT" ColumnName="DVT" />
+                <ScalarProperty Name="TENTAT" ColumnName="TENTAT" />
+                <ScalarProperty Name="TENHH" ColumnName="TENHH" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

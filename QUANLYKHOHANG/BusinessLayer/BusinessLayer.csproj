@@ -54,10 +54,12 @@
     <Compile Include="DONVI.cs" />
     <Compile Include="CONGTY.cs" />
     <Compile Include="DONVITINH.cs" />
+    <Compile Include="HANGHOA.cs" />
     <Compile Include="NHACUNGCAP.cs" />
     <Compile Include="NHOMHANGHOA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SYS_FUNC.cs" />
+    <Compile Include="XUATXU.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">

@@ -56,22 +56,6 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TEN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="tb_HANGHOA">
-    <Key>
-      <PropertyRef Name="BARCODE" />
-    </Key>
-    <Property Name="BARCODE" Type="String" MaxLength="13" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="TENHH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="TENTAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="DVT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="DONGIA" Type="Double" />
-    <Property Name="MANCC" Type="Int32" />
-    <Property Name="XUATXU" Type="Int32" />
-    <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
-    <Property Name="CREATE_BY" Type="Int32" />
-    <Property Name="DISABLED" Type="Boolean" />
-    <Property Name="IDNHOM" Type="Int32" />
-  </EntityType>
   <EntityType Name="tb_SYS_FUNC">
     <Key>
       <PropertyRef Name="FUNC_CODE" />
@@ -167,7 +151,6 @@
     <EntitySet Name="tb_CHUNGTU_CT" EntityType="Self.tb_CHUNGTU_CT" />
     <EntitySet Name="tb_DONVI" EntityType="Self.tb_DONVI" />
     <EntitySet Name="tb_DVT" EntityType="Self.tb_DVT" />
-    <EntitySet Name="tb_HANGHOA" EntityType="Self.tb_HANGHOA" />
     <EntitySet Name="tb_SYS_FUNC" EntityType="Self.tb_SYS_FUNC" />
     <EntitySet Name="tb_SYS_GROUP" EntityType="Self.tb_SYS_GROUP" />
     <EntitySet Name="tb_SYS_REPORT" EntityType="Self.tb_SYS_REPORT" />
@@ -179,6 +162,7 @@
     <EntitySet Name="tb_CONGTY" EntityType="KHOHANG.tb_CONGTY" />
     <EntitySet Name="tb_NHACUNGCAP" EntityType="KHOHANG.tb_NHACUNGCAP" />
     <EntitySet Name="tb_NHOMHH" EntityType="KHOHANG.tb_NHOMHH" />
+    <EntitySet Name="tb_HANGHOA" EntityType="KHOHANG.tb_HANGHOA" />
   </EntityContainer>
   <EntityType Name="tb_CONGTY">
     <Key>
@@ -213,5 +197,22 @@
     <Property Name="TENNHOM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="DISABLED" Type="Boolean" />
     <Property Name="GHICHU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tb_HANGHOA">
+    <Key>
+      <PropertyRef Name="BARCODE" />
+    </Key>
+    <Property Name="BARCODE" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="TENHH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TENTAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DVT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DONGIA" Type="Double" />
+    <Property Name="MANCC" Type="Int32" />
+    <Property Name="MAXX" Type="Int32" />
+    <Property Name="IDNHOM" Type="Int32" />
+    <Property Name="MOTA" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_BY" Type="Int32" />
+    <Property Name="DISABLED" Type="Boolean" />
   </EntityType>
 </Schema>

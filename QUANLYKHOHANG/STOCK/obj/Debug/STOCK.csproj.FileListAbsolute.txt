@@ -98,3 +98,4 @@ C:\Users\lephu\Source\Repos\Object-oriented-Software-Development\QUANLYKHOHANG\S
 C:\Users\lephu\Source\Repos\Object-oriented-Software-Development\QUANLYKHOHANG\STOCK\obj\Debug\STOCK.frmNhaCungCap.resources
 C:\Users\lephu\Source\Repos\Object-oriented-Software-Development\QUANLYKHOHANG\STOCK\obj\Debug\STOCK.frmDonViTinh.resources
 C:\Users\lephu\Source\Repos\Object-oriented-Software-Development\QUANLYKHOHANG\STOCK\obj\Debug\STOCK.frmNhomHangHoa.resources
+C:\Users\lephu\Source\Repos\Object-oriented-Software-Development\QUANLYKHOHANG\STOCK\obj\Debug\STOCK.frmHangHoa.resources

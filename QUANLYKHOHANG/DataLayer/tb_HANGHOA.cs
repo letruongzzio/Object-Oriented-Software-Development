@@ -20,10 +20,11 @@ namespace DataLayer
         public string DVT { get; set; }
         public Nullable<double> DONGIA { get; set; }
         public Nullable<int> MANCC { get; set; }
-        public Nullable<int> XUATXU { get; set; }
+        public Nullable<int> MAXX { get; set; }
+        public Nullable<int> IDNHOM { get; set; }
+        public string MOTA { get; set; }
         public Nullable<System.DateTime> CREATE_DATE { get; set; }
         public Nullable<int> CREATE_BY { get; set; }
         public Nullable<bool> DISABLED { get; set; }
-        public Nullable<int> IDNHOM { get; set; }
     }
 }

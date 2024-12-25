@@ -24,6 +24,10 @@ namespace BusinessLayer
         {
             return db.tb_DVT.ToList();
         }
+        public List<tb_DVT> getList()
+        {
+            return getAll();
+        }
 
         public void add(tb_DVT dvt)
         {

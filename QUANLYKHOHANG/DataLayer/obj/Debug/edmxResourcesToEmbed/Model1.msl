@@ -61,23 +61,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tb_HANGHOA">
-      <EntityTypeMapping TypeName="KHOHANG.tb_HANGHOA">
-        <MappingFragment StoreEntitySet="tb_HANGHOA">
-          <ScalarProperty Name="IDNHOM" ColumnName="IDNHOM" />
-          <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
-          <ScalarProperty Name="TENHH" ColumnName="TENHH" />
-          <ScalarProperty Name="TENTAT" ColumnName="TENTAT" />
-          <ScalarProperty Name="DVT" ColumnName="DVT" />
-          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
-          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
-          <ScalarProperty Name="XUATXU" ColumnName="XUATXU" />
-          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
-          <ScalarProperty Name="CREATE_BY" ColumnName="CREATE_BY" />
-          <ScalarProperty Name="DISABLED" ColumnName="DISABLED" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tb_SYS_FUNC">
       <EntityTypeMapping TypeName="KHOHANG.tb_SYS_FUNC">
         <MappingFragment StoreEntitySet="tb_SYS_FUNC">
@@ -210,6 +193,24 @@
           <ScalarProperty Name="DISABLED" ColumnName="DISABLED" />
           <ScalarProperty Name="TENNHOM" ColumnName="TENNHOM" />
           <ScalarProperty Name="IDNHOM" ColumnName="IDNHOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_HANGHOA">
+      <EntityTypeMapping TypeName="KHOHANG.tb_HANGHOA">
+        <MappingFragment StoreEntitySet="tb_HANGHOA">
+          <ScalarProperty Name="DISABLED" ColumnName="DISABLED" />
+          <ScalarProperty Name="CREATE_BY" ColumnName="CREATE_BY" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="IDNHOM" ColumnName="IDNHOM" />
+          <ScalarProperty Name="MAXX" ColumnName="MAXX" />
+          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="DVT" ColumnName="DVT" />
+          <ScalarProperty Name="TENTAT" ColumnName="TENTAT" />
+          <ScalarProperty Name="TENHH" ColumnName="TENHH" />
+          <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

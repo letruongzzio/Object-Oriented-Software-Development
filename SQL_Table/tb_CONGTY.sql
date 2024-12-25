@@ -1,14 +1,7 @@
-﻿USE QUANLY_KHOHANG
+﻿USE [QUANLY_KHOHANG]
 GO
 
-IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[tb_CONGTY]') AND type in (N'U'))
-DROP TABLE [dbo].[tb_Congty]
-GO
-
-USE QUANLY_KHOHANG
-GO
-
--- Bật cài đặt ANSI_NULLS (đối xử với giá trị NULL theo chuẩn ANSI)
+/****** Object:  Table [dbo].[tb_CONGTY]    Script Date: 12/25/2024 4:22:15 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -22,8 +15,12 @@ CREATE TABLE [dbo].[tb_CONGTY](
 	[EMAIL] [nvarchar](50) NULL,
 	[FAX] [nvarchar](20) NULL,
 	[DIACHI] [nvarchar](500) NULL,
-	[DISABLE] [bit] NULL,
-    CONSTRAINT [PK_tb_CONGTY] PRIMARY KEY CLUSTERED ([MACTY] ASC)   -- Khóa chính cho bảng, sắp xếp theo MACTY tăng dần
-)
-
+	[DISABLED] [bit] NULL,
+ CONSTRAINT [PK_tb_CONGTY] PRIMARY KEY CLUSTERED 
+(
+	[MACTY] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
 GO
+
+
